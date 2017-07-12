@@ -10,7 +10,15 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        final Intent intent = new Intent(this, AgreementActivity.class);
+        final Intent intent;
+        final SharedPreferencesRepo sharedPreferencesRepo = SharedPreferencesRepo.getInstance(this);
+        final boolean agree = sharedPreferencesRepo.isLicenseAgreement();
+
+        if (agree) {
+            intent = AnswersActivity.createIntent(this);
+        } else {
+            intent = AgreementActivity.createIntent(this);
+        }
         startActivity(intent);
         finish();
     }

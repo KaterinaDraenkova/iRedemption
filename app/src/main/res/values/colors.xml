@@ -3,4 +3,7 @@
     <color name="colorPrimary">#deb887</color>
     <color name="colorPrimaryDark">#ffa07a</color>
     <color name="colorAccent">#008000</color>
+
+    <color name="common_shadow_color">#35000000</color>
+    <color name="common_shadow_center_color">#15000000</color>
 </resources>
