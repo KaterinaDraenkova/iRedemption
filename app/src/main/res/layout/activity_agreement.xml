@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/splash_color"
-    android:layout_weight="15"
+    android:layout_weight="6"
     tools:context="org.katerina.iRedemption.AgreementActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="12">
+        android:layout_weight="4">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,36 +34,36 @@
 
     </ScrollView>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
-        android:padding="@dimen/licence_padding"
-        android:orientation="horizontal">
+        android:layout_weight="2"
+        android:padding="@dimen/licence_padding">
 
         <TextView
-            android:layout_width="0dp"
+            android:id="@+id/disagree"
+            style="@style/AgreeFont"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="bottom"
-            android:gravity="left"
-            android:textSize="@dimen/licence_agree_size"
-            android:text="@string/license_no"/>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:gravity="start"
+            android:text="@string/license_no"
+            android:layout_alignParentLeft="true"/>
 
         <TextView
-            android:layout_width="0dp"
+            android:id="@+id/agree"
+            style="@style/AgreeFont"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="bottom"
-            android:gravity="right"
-            android:textSize="@dimen/licence_agree_size"
-            android:text="@string/license_yes"/>
+            android:gravity="end"
+            android:text="@string/license_yes"
+            android:layout_alignParentRight="true"/>
 
-    </LinearLayout>
+        <org.katerina.iRedemption.GifView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

@@ -12,4 +12,11 @@
         <item name="android:windowBackground">@drawable/background_splash</item>
     </style>
 
+    <style name="AgreeFont" parent="@android:style/TextAppearance.Medium">
+        <item name="android:paddingBottom">@dimen/license_answer_padding_bottom</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/licence_agree_size</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
 </resources>
