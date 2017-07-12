@@ -20,6 +20,8 @@
         </activity>
         <activity
             android:name="org.katerina.iRedemption.AgreementActivity"/>
+        <activity
+            android:name="org.katerina.iRedemption.AnswersActivity"/>
     </application>
 
 </manifest>

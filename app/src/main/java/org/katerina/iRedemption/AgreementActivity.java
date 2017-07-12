@@ -32,7 +32,7 @@ public class AgreementActivity extends Activity {
         final SharedPreferencesRepo sharedPreferencesRepo = SharedPreferencesRepo.getInstance(this);
         sharedPreferencesRepo.setLicenseAgreement(true);
 
-        final Intent intent = AgreementActivity.createIntent(this);
+        final Intent intent = AnswersActivity.createIntent(this);
         startActivity(intent);
         finish();
     }

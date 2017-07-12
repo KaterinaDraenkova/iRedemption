@@ -8,4 +8,6 @@
     <string name="license_text">\tThese license terms are an agreement between you and your still small voice. Please read them.\n\tAll your input answers will be case-insensitive. They also will not depend on the input language.\n\tBut be careful! Three incorrect answers will nullify your current results and you will have to start redemption from the beginning.\n\tClick the <u>"&licenseyes;"</u> button to continue.</string>
     <string name="license_no"><u>Back</u></string>
     <string name="license_yes"><u>&licenseyes;</u></string>
+    <string name="task_number">Task 1</string>
+    <string name="answer_hint">Enter the letter</string>
 </resources>

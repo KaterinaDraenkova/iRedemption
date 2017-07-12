@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 
+import butterknife.ButterKnife;
+
 /**
  * Created by Katerina Draenkova on 12.07.2017.
  */
 
-class AnswersActivity extends AppCompatActivity {
+public class AnswersActivity extends AppCompatActivity {
 
     @NonNull
     public static Intent createIntent(final Context context) {
@@ -21,13 +23,6 @@ class AnswersActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answers);
-
-        if (savedInstanceState == null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, TaskFirstFragment.newInstance(), TaskFirstFragment.TAG)
-                    .commit();
-        }
-
+        ButterKnife.bind(this);
     }
 }
