@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/splash_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="@dimen/congrats_text_size"
+        android:paddingTop="@dimen/congrats_padding_top"
+        android:textStyle="bold"
+        android:text="@string/congratulations" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="@dimen/sad_smile_size"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        app:srcCompat="@drawable/ic_sentiment_very_satisfied" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="bottom|center_horizontal"
+        android:textSize="@dimen/help_text_size"
+        android:paddingBottom="@dimen/help_text_padding_bottom"
+        android:text="@string/help_text"/>
 
 </LinearLayout>

@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -43,6 +45,21 @@ public class AnswersActivity extends AppCompatActivity {
         initAnswers();
         initTaskNumber();
         initAttemptCount();
+
+        mAnswerEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(final TextView v, final int actionId, final KeyEvent event) {
+                if ((actionId == EditorInfo.IME_ACTION_DONE)
+                        || ((event.getKeyCode() == KeyEvent.KEYCODE_ENTER)
+                        && (event.getAction() == KeyEvent.ACTION_DOWN))){
+                    onFabClick();
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+        });
     }
 
     private void initTaskNumber() {
@@ -66,13 +83,15 @@ public class AnswersActivity extends AppCompatActivity {
             initAnswers();
 
             if (mAnswers.length() == RIGHT_ANSWERS.length()) {
+                mSharedPreferencesRepo.clearAllResults();
+
                 final Intent intent = FinishActivity.createIntent(this);
                 startActivity(intent);
                 finish();
+            } else {
+                initTaskNumber();
+                mAnswerEditText.setText("");
             }
-            
-            initTaskNumber();
-            mAnswerEditText.setText("");
         } else {
             mSharedPreferencesRepo.setErrorAgain();
             initAttemptCount();

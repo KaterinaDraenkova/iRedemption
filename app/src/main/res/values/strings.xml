@@ -10,4 +10,6 @@
     <string name="license_yes"><u>&licenseyes;</u></string>
     <string name="task_number">Task %1$d</string>
     <string name="answer_hint">Enter the letter</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="help_text">To complete the installation, you need to activate the unique code \'<b><i>WEDDING</i></b>\' by calling the hotline.</string>
 </resources>
