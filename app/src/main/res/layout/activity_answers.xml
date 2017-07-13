@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
     <View
         android:id="@+id/shadow"
         android:layout_width="match_parent"
         android:layout_height="@dimen/common_shadow_height"
-        android:background="@drawable/tabs_shadow"/>
+        android:background="@drawable/tabs_shadow" />
 
     <TextView
         android:id="@+id/task_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/task_number"
-        android:textSize="@dimen/task_number_size"
-        android:padding="@dimen/task_number_padding"/>
+        android:padding="@dimen/task_number_padding"
+        android:textSize="@dimen/task_number_size" />
 
     <EditText
         android:id="@+id/answer_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:lines="1"
         android:layout_margin="@dimen/answer_margin"
-        android:textSize="@dimen/answer_text_size"
-        android:hint="@string/answer_hint" />
+        android:hint="@string/answer_hint"
+        android:lines="1"
+        android:gravity="center_horizontal"
+        android:maxLength="1"
+        android:textSize="@dimen/answer_text_size" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/continue_button"
@@ -35,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/answer_margin"
         android:src="@drawable/ic_done"
-        app:fabSize="normal"/>
+        app:elevation="@dimen/fab_elevation"
+        app:fabSize="normal" />
 
 </LinearLayout>

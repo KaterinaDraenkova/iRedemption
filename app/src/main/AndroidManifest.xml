@@ -22,6 +22,10 @@
             android:name="org.katerina.iRedemption.AgreementActivity"/>
         <activity
             android:name="org.katerina.iRedemption.AnswersActivity"/>
+        <activity
+            android:name="org.katerina.iRedemption.FinishActivity"/>
+        <activity
+            android:name="org.katerina.iRedemption.SadActivity"/>
     </application>
 
 </manifest>
